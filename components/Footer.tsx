@@ -94,7 +94,7 @@ export const Footer = () => {
                   >
                     <img
                       src={info.img}
-                      alt={`${info.id} icon`}
+                      alt={`${info.name || info.id} logo`}
                       className="w-4 h-4 group-hover:scale-110 transition-transform duration-200"
                     />
                   </a>

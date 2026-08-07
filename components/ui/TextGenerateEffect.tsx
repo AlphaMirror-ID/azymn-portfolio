@@ -6,16 +6,18 @@ export const TextGenerateEffect = ({
   className,
   filter = true,
   duration = 0.5,
+  as: Tag = 'div',
 }: {
   words: string;
   className?: string;
   filter?: boolean;
   duration?: number;
+  as?: React.ElementType;
 }) => {
   const wordsArray = words.split(' ');
 
   return (
-    <div className={cn('font-bold', className)}>
+    <Tag className={cn('font-bold', className)}>
       <div className="my-4">
         <div className="dark:text-white text-black leading-snug tracking-wide">
           <div>
@@ -33,6 +35,6 @@ export const TextGenerateEffect = ({
           </div>
         </div>
       </div>
-    </div>
+    </Tag>
   );
 };

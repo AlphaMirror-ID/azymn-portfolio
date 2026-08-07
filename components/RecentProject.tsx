@@ -1,6 +1,33 @@
 import React from 'react';
 import { projects } from '@/data';
 import { PinContainer } from './ui/3d-pin';
+import Image from 'next/image';
+
+const getTechName = (iconPath: string) => {
+  const name = iconPath.split('/').pop()?.split('.')[0] || 'technology';
+  const mapping: Record<string, string> = {
+    re: 'React',
+    vite: 'Vite',
+    node: 'Node.js',
+    mysql: 'MySQL',
+    tmdb: 'TMDB API',
+    laravel: 'Laravel',
+    tail: 'Tailwind CSS',
+    php: 'PHP',
+    gemini: 'Gemini AI',
+    spoonacular: 'Spoonacular API',
+    ci: 'CodeIgniter',
+    leaflet: 'Leaflet',
+    mongo: 'MongoDB',
+    html: 'HTML',
+    css: 'CSS',
+    js: 'JavaScript',
+    figma: 'Figma',
+    next: 'Next.js',
+    git: 'Git',
+  };
+  return mapping[name] || name;
+};
 
 export const RecentProject = () => {
   return (
@@ -10,31 +37,33 @@ export const RecentProject = () => {
         <div className="h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
       </div>
 
-      <h1 className="heading" id="projects">
+      <h2 className="heading" id="projects">
         Some highlights from my {''}
         <span className="text-cyan-500">latest projects</span>
-      </h1>
+      </h2>
 
       <div className="flex flex-wrap items-center justify-center p-4 gap-x-24 gap-y-8 mt-10">
-        {projects.map(({ id, title, des, img, iconLists, role }) => (
+        {projects.map(({ id, title, des, img, iconLists, role, link }) => (
           <div
             key={id}
             className="sm:h-[41rem] h-[32rem] lg:min-h-[32.5rem] flex items-center justify-center sm:w-[570px] w-[80vw]"
           >
-            <PinContainer title={title.split(' ')[0]} href={title}>
+            <PinContainer title={title.split(' ')[0]} href={link}>
               <div className="relative flex items-center justify-center sm:w-[570px] w-[80vw] overflow-hidden sm:h-[40vh] h-[30vh] mb-10">
                 <div className="relative w-full h-full overflow-hidden rounded-xl bg-[#13162d]">
                   {/* <img src="/bg.png" alt="bg-img" /> */}
-                  <img
+                  <Image
                     src={img}
                     alt={title}
+                    fill
+                    sizes="(max-width: 768px) 80vw, 570px"
                     className="z-10 absolute w-full h-full object-cover"
                   />
                 </div>
               </div>
-              <h1 className="lg:text-2xl md:text-xl text-base line-clamp-1 font-bold">
+              <h3 className="lg:text-2xl md:text-xl text-base line-clamp-1 font-bold">
                 {title}
-              </h1>
+              </h3>
               <p className="text-sm font-light text-cyan-400 mt-2">{role}</p>
               <p className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2 text-white/60">
                 {des}
@@ -48,7 +77,7 @@ export const RecentProject = () => {
                       className="border-white/[0.2] rounded-full bg-slate-900 lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
                       style={{ transform: `translateX(-${5 * index * 2}px)` }}
                     >
-                      <img src={icon} alt={title} className="p-2" />
+                      <img src={icon} alt={`${getTechName(icon)} logo`} className="p-2" />
                     </div>
                   ))}
                 </div>

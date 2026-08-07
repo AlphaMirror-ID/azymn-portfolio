@@ -42,10 +42,10 @@ export function TimelineDemo() {
         <div className="h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
       </div>
 
-      <h1 className="heading">
+      <h2 className="heading">
         Highlights from my{' '}
         <span className="text-cyan-500">development journey</span>
-      </h1>
+      </h2>
       <Timeline data={data} />
     </div>
   );

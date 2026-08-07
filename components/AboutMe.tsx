@@ -1,5 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 export const AboutMe = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -48,13 +49,13 @@ export const AboutMe = () => {
       </div>
 
       <div className="max-w-6xl mx-auto relative">
-        <h1
+        <h2
           className={`heading mb-16 transform transition-all duration-1000 ${
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
           }`}
         >
           About <span className="text-cyan-500">Me</span>
-        </h1>
+        </h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Profile Image */}
@@ -67,10 +68,13 @@ export const AboutMe = () => {
           >
             <div className="relative group">
               <div className="w-80 h-80 rounded-3xl overflow-hidden border-2 border-white/20 shadow-2xl transform transition-all duration-500 group-hover:scale-105 group-hover:rotate-2 group-hover:shadow-3xl">
-                <img
+                <Image
                   src="/profile-photo.jpg"
-                  alt="Aziyusman"
+                  alt="Aziyusman - Full Stack Developer Profile Photo"
+                  width={320}
+                  height={320}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>

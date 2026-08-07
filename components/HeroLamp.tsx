@@ -25,6 +25,7 @@ export function LampDemo() {
 
 
         <TextGenerateEffect
+          as="h1"
           className="text-center text-[40px] md:text-5xl lg:text-6xl"
           words="Bringing Bold Visions to Pixel-Perfect Life"
         />

@@ -45,7 +45,8 @@ export const FloatingNav = ({
 
   return (
     <AnimatePresence mode="wait">
-      <motion.div
+      <motion.nav
+        aria-label="Main Navigation"
         initial={{
           opacity: 1,
           y: -100,
@@ -74,7 +75,7 @@ export const FloatingNav = ({
             <span className="text-sm !cursor-pointer">{navItem.name}</span>
           </a>
         ))}
-      </motion.div>
+      </motion.nav>
     </AnimatePresence>
   );
 };

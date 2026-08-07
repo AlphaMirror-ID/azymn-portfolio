@@ -285,16 +285,19 @@ export const workExperience = [
 export const socialMedia = [
   {
     id: 1,
+    name: 'GitHub',
     link: 'https://github.com/mcnemy001/',
     img: '/git.svg',
   },
   {
     id: 2,
+    name: 'Instagram',
     link: 'https://www.instagram.com/azysmn.m/',
     img: '/insta.svg',
   },
   {
     id: 3,
+    name: 'LinkedIn',
     link: 'https://www.linkedin.com/in/aziyusman/',
     img: '/link.svg',
   },

@@ -9,9 +9,9 @@ export const Tools = () => {
         <div className="h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
       </div>
       
-      <h1 className="heading">
+      <h2 className="heading">
         The tools and tech I<span className="text-cyan-500"> work with</span>
-      </h1>
+      </h2>
 
       <div className="flex flex-col items-center max-lg:mt-10 mt-20">
         <div className="h-[25vh] md:h-[15rem] rounded-md flex flex-col antialiased items-center justify-center relative overflow-hidden">
