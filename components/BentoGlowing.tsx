@@ -30,14 +30,14 @@ export function GlowingEffectDemoSecond() {
         area="md:[grid-area:2/1/3/7] xl:[grid-area:1/5/3/8]"
         icon={<PiPaintBrushDuotone className="w-5 h-5 text-white/70" />}
         title="Simplicity in design"
-        description="I aim to build things that feel intuitive—no extra clicks, no clutter."
+        description="I aim to build things that feel intuitive no extra clicks, no clutter."
       />
 
       <GridItem
         area="md:[grid-area:2/7/3/13] xl:[grid-area:1/8/2/13]"
         icon={<PiSparkleDuotone className="w-5 h-5 text-white/70" />}
         title="Curiosity-led workflow"
-        description="Much of what I build starts as a ‘what if?’ — then turns into something real."
+        description="Much of what I build starts as a ‘what if?’ then turns into something real."
       />
 
       <GridItem

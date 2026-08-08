@@ -32,7 +32,7 @@ export function LampDemo() {
 
         <p className="mt-4 md:tracking-wider text-sm md:text-lg lg:text-2xl max-w-prose text-center">
           I design and build interfaces that not only look good, but feel right
-          to use. Focused on clarity, speed, and great user experiences — one
+          to use. Focused on clarity, speed, and great user experiences one
           pixel at a time.
         </p>
 

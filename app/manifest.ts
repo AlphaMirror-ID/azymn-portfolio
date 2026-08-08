@@ -2,9 +2,10 @@ import type { MetadataRoute } from 'next';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Aziyusman's Portfolio",
+    name: 'Aziyusman | Frontend Developer',
     short_name: 'Aziyusman',
-    description: 'Explore the portfolio of Aziyusman — a web developer passionate about building modern and responsive websites.',
+    description:
+      'Portfolio of Aziyusman, a Frontend Developer focused on Web Development, with experience building web, full-stack, and software projects.',
     start_url: '/',
     display: 'standalone',
     background_color: '#000319',

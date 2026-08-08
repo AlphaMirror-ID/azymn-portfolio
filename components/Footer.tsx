@@ -34,7 +34,7 @@ export const Footer = () => {
 
               <p className="text-base text-white/70 max-w-lg leading-relaxed">
                 Whether you have an idea or just want to say hi, feel free to
-                reach out — I&apos;m open to meaningful collaboration and interesting
+                reach out I&apos;m open to meaningful collaboration and interesting
                 side-projects.
               </p>
             </div>

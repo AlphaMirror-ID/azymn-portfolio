@@ -113,7 +113,7 @@ export const AboutMe = () => {
 
                 <p className="text-white/80 leading-relaxed transform transition-all duration-300 hover:text-white/90">
                   Outside frontend development, I also love exploring other tech
-                  stacks — from building web apps with PHP & Laravel, to
+                  stacks from building web apps with PHP & Laravel, to
                   developing mobile apps using Kotlin. I&apos;m also deeply
                   interested in UI/UX design and often spend time creating
                   visual concepts and graphic designs.

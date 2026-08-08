@@ -24,27 +24,29 @@ export const viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: "Aziyusman's Portfolio | Full Stack Developer & Software Engineer",
-    template: "%s | Aziyusman's Portfolio",
+    default: 'Aziyusman | Frontend Developer',
+    template: '%s | Aziyusman',
   },
   description:
-    'Explore the portfolio of Aziyusman — a Full Stack Developer and Software Engineer passionate about building modern, fast, and responsive web applications.',
-  applicationName: "Aziyusman's Portfolio",
+    'Portfolio of Aziyusman, a Frontend Developer focused on Web Development, with experience building web, full-stack, and software projects.',
+  applicationName: 'Aziyusman Portfolio',
   authors: [{ name: 'Aziyusman', url: baseUrl }],
   creator: 'Aziyusman',
   publisher: 'Aziyusman',
   keywords: [
     'Aziyusman',
-    'Portfolio',
-    'Full Stack Developer',
-    'Software Engineer',
-    'Next.js',
+    'Frontend Developer',
     'Web Developer',
+    'Frontend Development',
+    'Web Development',
+    'React Developer',
+    'Next.js',
+    'Full Stack Developer',
+    'Software Development',
+    'Portfolio',
+    'Informatics Engineering',
     'Bandung',
     'Indonesia',
-    'Frontend Developer',
-    'React Developer',
-    'Laravel Developer',
   ],
   category: 'technology',
   robots: {
@@ -68,11 +70,11 @@ export const metadata: Metadata = {
   },
   manifest: '/manifest.json',
   openGraph: {
-    title: "Aziyusman's Portfolio | Full Stack Developer & Software Engineer",
+    title: 'Aziyusman | Frontend Developer',
     description:
-      'Explore the portfolio of Aziyusman — a Full Stack Developer and Software Engineer passionate about building modern, fast, and responsive web applications.',
+      'Portfolio of Aziyusman, a Frontend Developer focused on Web Development, with experience building web, full-stack, and software projects.',
     url: baseUrl,
-    siteName: "Aziyusman's Portfolio",
+    siteName: 'Aziyusman | Frontend Developer',
     type: 'website',
     locale: 'en_US',
     images: [
@@ -80,15 +82,15 @@ export const metadata: Metadata = {
         url: '/profile-photo.jpg',
         width: 1200,
         height: 630,
-        alt: 'Aziyusman - Full Stack Developer Portfolio',
+        alt: 'Aziyusman - Frontend Developer Portfolio',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Aziyusman's Portfolio | Full Stack Developer & Software Engineer",
+    title: 'Aziyusman | Frontend Developer',
     description:
-      'Explore the portfolio of Aziyusman — a Full Stack Developer and Software Engineer passionate about building modern, fast, and responsive web applications.',
+      'Portfolio of Aziyusman, a Frontend Developer focused on Web Development, with experience building web, full-stack, and software projects.',
     creator: '@aziyusman',
     images: ['/profile-photo.jpg'],
   },
@@ -105,9 +107,9 @@ export default function RootLayout({
     name: 'Aziyusman',
     url: baseUrl,
     image: `${baseUrl}/profile-photo.jpg`,
-    jobTitle: 'Full Stack Developer',
+    jobTitle: 'Frontend Developer',
     description:
-      'Explore the portfolio of Aziyusman — a Full Stack Developer and Software Engineer passionate about building modern, fast, and responsive websites.',
+      'Portfolio of Aziyusman, a Frontend Developer focused on Web Development, with experience building web, full-stack, and software projects.',
     sameAs: [
       'https://github.com/mcnemy001/',
       'https://www.instagram.com/azysmn.m/',
@@ -118,10 +120,10 @@ export default function RootLayout({
   const websiteJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: "Aziyusman's Portfolio",
+    name: 'Aziyusman | Frontend Developer',
     url: baseUrl,
     description:
-      'Explore the portfolio of Aziyusman — a Full Stack Developer and Software Engineer passionate about building modern, fast, and responsive websites.',
+      'Portfolio of Aziyusman, a Frontend Developer focused on Web Development, with experience building web, full-stack, and software projects.',
   };
 
   return (
