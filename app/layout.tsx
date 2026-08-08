@@ -111,7 +111,7 @@ export default function RootLayout({
     description:
       'Portfolio of Aziyusman, a Frontend Developer focused on Web Development, with experience building web, full-stack, and software projects.',
     sameAs: [
-      'https://github.com/mcnemy001/',
+      'https://github.com/AlphaMirror-ID',
       'https://www.instagram.com/azysmn.m/',
       'https://www.linkedin.com/in/aziyusman/',
     ],

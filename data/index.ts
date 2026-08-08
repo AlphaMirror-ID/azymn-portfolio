@@ -286,7 +286,7 @@ export const socialMedia = [
   {
     id: 1,
     name: 'GitHub',
-    link: 'https://github.com/mcnemy001/',
+    link: 'https://github.com/AlphaMirror-ID',
     img: '/git.svg',
   },
   {
