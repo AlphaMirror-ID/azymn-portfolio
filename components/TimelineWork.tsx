@@ -39,12 +39,12 @@ export function TimelineDemo() {
       content: (
         <div>
           <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-            <strong>UI/UX &amp; Frontend Developer</strong> · Lingkar Rasio
-            Teknologi. Worked on a web-based project for a laptop service
-            business, contributing to UI/UX design and frontend development.
-            Designed user interfaces and translated design concepts into
-            responsive web pages with a focus on usability, visual consistency,
-            and user experience.
+            <strong>UI/UX &amp; Frontend Developer (Internship)</strong> at
+            Lingkar Rasio Teknologi. Worked on a web-based project for a laptop
+            service business, contributing to UI/UX design and frontend
+            development. Designed user interfaces and translated design concepts
+            into responsive web pages with a focus on usability, visual
+            consistency, and user experience.
           </p>
         </div>
       ),
