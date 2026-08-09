@@ -20,20 +20,18 @@ export function LampDemo() {
         className="relative z-10 flex flex-col items-center justify-center px-4"
       >
         <h2 className="uppercase tracking-widest text-xs text-blue-100 max-w-prose text-center">
-          ELEVATING IDEAS THROUGH INTERFACE DESIGN
+          FRONTEND DEVELOPER
         </h2>
 
 
         <TextGenerateEffect
           as="h1"
           className="text-center text-[40px] md:text-5xl lg:text-6xl"
-          words="Bringing Bold Visions to Pixel-Perfect Life"
+          words="Turning Ideas Into Interfaces That Work"
         />
 
         <p className="mt-4 md:tracking-wider text-sm md:text-lg lg:text-2xl max-w-prose text-center">
-          I design and build interfaces that not only look good, but feel right
-          to use. Focused on clarity, speed, and great user experiences one
-          pixel at a time.
+          I enjoy turning ideas into responsive and practical web experiences. My main focus is frontend development, while my experience across full-stack and software projects helps me understand the bigger picture behind what I build.
         </p>
 
         <a href="#projects" className="mt-10">

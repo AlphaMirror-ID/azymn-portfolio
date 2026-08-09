@@ -106,25 +106,15 @@ export const AboutMe = () => {
 
               <div className="space-y-4">
                 <p className="text-white/80 leading-relaxed transform transition-all duration-300 hover:text-white/90">
-                  A passionate frontend developer who enjoys making cool things
-                  on the web. Whether it&apos;s a slick UI or a fast-loading app, I&apos;m
-                  all about building with purpose and precision.
+                  I'm a frontend developer focused on building web interfaces that are responsive, clear, and comfortable to use. I enjoy working on the details that make an interface feel simple and natural, from layout and interactions to performance and responsiveness.
                 </p>
 
                 <p className="text-white/80 leading-relaxed transform transition-all duration-300 hover:text-white/90">
-                  Outside frontend development, I also love exploring other tech
-                  stacks from building web apps with PHP & Laravel, to
-                  developing mobile apps using Kotlin. I&apos;m also deeply
-                  interested in UI/UX design and often spend time creating
-                  visual concepts and graphic designs.
+                  Frontend development is where I want to grow, but my projects have also taken me beyond the frontend. I've worked on full-stack web applications using technologies such as PHP, Laravel, Node.js, and MySQL, as well as software projects involving APIs, databases, and AI.
                 </p>
 
                 <p className="text-white/80 leading-relaxed transform transition-all duration-300 hover:text-white/90">
-                  I am always eager to learn new tools, improve my workflow, and
-                  stay updated with the latest trends in tech and design.
-                  Whether it&apos;s debugging tricky layouts or experimenting with
-                  new libraries, I find joy in the process of building and
-                  refining digital products.
+                  I'm also interested in UI/UX and visual design, especially how design decisions translate into real interfaces. For me, every project is an opportunity to learn something new, refine my workflow, and turn an idea into something that actually works.
                 </p>
               </div>
             </div>

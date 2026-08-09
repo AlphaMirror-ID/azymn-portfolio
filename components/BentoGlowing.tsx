@@ -16,35 +16,35 @@ export function GlowingEffectDemoSecond() {
         area="md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]"
         icon={<PiTreeStructure className="w-5 h-5 text-white/70" />}
         title="Building with clarity"
-        description="Clean structure and thoughtful layout are always a priority."
+        description="I prefer interfaces and code that are easy to understand, maintain, and use."
       />
 
       <GridItem
         area="md:[grid-area:1/7/2/13] xl:[grid-area:2/1/3/5]"
         icon={<PiCodeDuotone className="w-5 h-5 text-white/70" />}
         title="Code with purpose"
-        description="Not everything needs to be fancy, but it should always be intentional."
+        description="I try to keep things intentional, choosing solutions that solve the problem without unnecessary complexity."
       />
 
       <GridItem
         area="md:[grid-area:2/1/3/7] xl:[grid-area:1/5/3/8]"
         icon={<PiPaintBrushDuotone className="w-5 h-5 text-white/70" />}
-        title="Simplicity in design"
-        description="I aim to build things that feel intuitive no extra clicks, no clutter."
+        title="Design meets development"
+        description="I enjoy translating visual concepts into functional interfaces while keeping the original design intent intact."
       />
 
       <GridItem
         area="md:[grid-area:2/7/3/13] xl:[grid-area:1/8/2/13]"
         icon={<PiSparkleDuotone className="w-5 h-5 text-white/70" />}
         title="Curiosity-led workflow"
-        description="Much of what I build starts as a ‘what if?’ then turns into something real."
+        description="Many of my projects start with a simple question or idea that I want to explore and turn into something real."
       />
 
       <GridItem
         area="md:[grid-area:3/1/4/13] xl:[grid-area:2/8/3/13]"
         icon={<PiStudentDuotone className="w-5 h-5 text-white/70" />}
         title="Always learning"
-        description="Exploring new libraries, patterns, or UI ideas is part of the weekly routine."
+        description="There is always another library, technique, or idea worth exploring and adding to the toolkit."
       />
     </ul>
   );

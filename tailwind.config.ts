@@ -166,7 +166,11 @@ const config = {
         'scroll-vertical': 'scroll-vertical 20s linear infinite',
       },
       fontFamily: {
-        inter: ['Inter', 'sans-serif'],
+        sans: ['var(--font-inter)', 'sans-serif'],
+        heading: ['var(--font-inter-tight)', 'var(--font-inter)', 'sans-serif'],
+        mono: ['var(--font-fira-code)', 'monospace'],
+        inter: ['var(--font-inter)', 'sans-serif'],
+        'inter-tight': ['var(--font-inter-tight)', 'sans-serif'],
       },
     },
   },
