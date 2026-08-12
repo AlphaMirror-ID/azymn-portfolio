@@ -74,7 +74,7 @@ export const projects = [
     id: 1,
     title: 'DUMovies - Movie Mood Recommendation App',
     des: 'Web app that recommends movies based on your mood using TMDB API. Built with React, Vite, Node.js, and MySQL.',
-    img: '/movie.png',
+    img: '/Du-Movies.jpg',
     iconLists: ['/re.svg', '/vite.svg', '/node.svg', '/mysql.svg', '/tmdb.svg'],
     role: 'Frontend Developer',
     link: 'https://github.com/aziyusman/dumovies', // ganti jika ada
@@ -83,7 +83,7 @@ export const projects = [
     id: 2,
     title: 'HRPortal - Employee Management',
     des: 'A Laravel-based HR system to manage employee contracts, status, and reminders. MySQL + Tailwind CSS UI.',
-    img: '/hr.png',
+    img: '/HRPortal.jpg',
     iconLists: ['/laravel.svg', '/tail.svg', '/mysql.svg', '/php.svg'],
     role: 'Fullstack Developer',
     link: 'https://github.com/aziyusman/hrportal', // ganti jika ada
@@ -93,7 +93,7 @@ export const projects = [
     id: 3,
     title: 'ResepWarm - Smart Recipe Generator',
     des: 'Laravel app with Spoonacular API & Gemini AI for managing, generating, and recommending recipes from images.',
-    img: '/recipe.png',
+    img: '/Resep-Warm.jpg',
     iconLists: [
       '/laravel.svg',
       '/mysql.svg',
@@ -108,7 +108,7 @@ export const projects = [
     id: 4,
     title: 'Gistakhir - GIS Web App for Land Surveyors',
     des: 'CodeIgniter-based GIS platform for CRUD land data with interactive map using Leaflet & GeoJSON.',
-    img: '/gis.png',
+    img: '/GIS-Takhir.jpg',
     iconLists: ['/ci.svg', '/mysql.svg', '/leaflet.svg'],
     role: 'Fullstack Developer',
     link: 'https://github.com/aziyusman/gis-surveyor', // ganti jika ada
@@ -118,7 +118,7 @@ export const projects = [
     id: 5,
     title: 'PHSync - Soil Monitoring Web App',
     des: 'Realtime monitoring system displaying soil moisture and temperature. Powered by IoT devices, MongoDB, and React frontend.',
-    img: '/soil.png',
+    img: '/PHSync.jpg',
     iconLists: ['/re.svg', '/tail.svg', '/mongo.svg'],
     role: 'Frontend Developer',
     link: 'https://github.com/aziyusman/soil-monitoring', // ganti jika ada
@@ -128,7 +128,7 @@ export const projects = [
     id: 6,
     title: 'Martvel - Simple POS System',
     des: 'Lightweight POS system using HTML, CSS, JS, and PHP for small store transaction management.',
-    img: '/pos.png',
+    img: '/Martvel.jpg',
     iconLists: ['/html.svg', '/css.svg', '/js.svg', '/php.svg'],
     role: 'Frontend Developer',
     link: 'https://github.com/aziyusman/simple-pos', // ganti jika ada
@@ -137,7 +137,7 @@ export const projects = [
     id: 7,
     title: 'Bustik - Bus Ticket Mobile UI/UX',
     des: 'Mobile UI design for bus ticket booking created with Figma. Focused on usability and clean experience.',
-    img: '/bus.png',
+    img: '/Bustik.jpg',
     iconLists: ['/figma.svg'],
     role: 'UI/UX Designer',
     link: 'https://www.figma.com/file/example-bus-ticket', // ganti jika ada figma link

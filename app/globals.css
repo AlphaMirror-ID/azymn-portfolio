@@ -89,4 +89,8 @@
   .black-gradient {
     background: linear-gradient(90deg, #161a31 0%, #06091f 100%);
   }
+
+  .glass {
+    @apply bg-black-200 backdrop-blur-md border border-white/20;
+  }
 }

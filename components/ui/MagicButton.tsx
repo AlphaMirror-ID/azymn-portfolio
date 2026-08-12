@@ -14,13 +14,16 @@ export const MagicButton = ({
   otherClasses?: string;
 }) => {
   return (
-    <button className="relative inline-flex h-12 w-fit overflow-hidden rounded-lg p-[1px] focus:outline-none md:mt-5" onClick={handleClick}>
-      <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#a5f3fc_0%,#06b6d4_25%,#0c6485_50%,#06b6d4_75%,#a5f3fc_100%)]" />
-      <span className={`inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-slate-950 px-7 text-sm font-medium text-white backdrop-blur-3xl gap-2 ${otherClasses}`}>
-        {position === 'left' && icon}
+    <button 
+      className={`group flex items-center gap-3 px-6 py-3 text-sm font-mono tracking-widest uppercase text-white-200/80 hover:text-cyan-400 transition-all duration-300 hover:bg-white/5 rounded-full border border-white/10 hover:border-cyan-400/50 relative overflow-hidden focus:outline-none ${otherClasses}`} 
+      onClick={handleClick}
+    >
+      <span className="relative z-10 flex items-center gap-2">
+        {position === 'left' && <span className="group-hover:-translate-x-1 transition-transform duration-300">{icon}</span>}
         {title}
-        {position === 'right' && icon}
+        {position === 'right' && <span className="group-hover:translate-x-1 transition-transform duration-300">{icon}</span>}
       </span>
+      <div className="absolute inset-0 bg-cyan-400/0 group-hover:bg-cyan-400/10 transition-colors duration-300"></div>
     </button>
   );
 };

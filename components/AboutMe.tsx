@@ -1,6 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
+import { BackgroundGrid } from './BackgroundGrid';
 
 export const AboutMe = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -39,16 +40,13 @@ export const AboutMe = () => {
 
   return (
     <section
-      className="w-full py-20 md:py-32 px-6 bg-transparent relative overflow-hidden"
+      className="w-full pt-20 md:pt-32 pb-10 md:pb-12 px-6 bg-transparent relative overflow-hidden"
       id="about"
     >
-      {/* Animated background elements */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-cyan-400/10 to-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-purple-400/10 to-pink-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-      </div>
+      <BackgroundGrid side="right" />
 
-      <div className="max-w-6xl mx-auto relative">
+      {/* Content wrapper */}
+      <div className="max-w-6xl mx-auto relative z-10">
         <h2
           className={`heading mb-16 transform transition-all duration-1000 ${
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
@@ -67,7 +65,7 @@ export const AboutMe = () => {
             }`}
           >
             <div className="relative group">
-              <div className="w-80 h-80 rounded-3xl overflow-hidden border-2 border-white/20 shadow-2xl transform transition-all duration-500 group-hover:scale-105 group-hover:rotate-2 group-hover:shadow-3xl">
+              <div className="w-80 h-80 rounded-3xl overflow-hidden glass shadow-2xl transform transition-all duration-500 group-hover:scale-105 group-hover:rotate-2 group-hover:shadow-3xl">
                 <Image
                   src="/profile-photo.jpg"
                   alt="Aziyusman - Full Stack Developer Profile Photo"
@@ -76,7 +74,7 @@ export const AboutMe = () => {
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-black-100/10 group-hover:bg-transparent transition-colors duration-300"></div>
               </div>
 
               {/* Enhanced decorative elements */}
@@ -129,7 +127,7 @@ export const AboutMe = () => {
                 {skills.map((skill, index) => (
                   <div
                     key={skill.name}
-                    className={`group relative px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm text-white/70 cursor-pointer transform transition-all duration-300 hover:scale-105 hover:bg-gradient-to-r hover:${skill.color} hover:text-white hover:border-transparent hover:shadow-lg`}
+                    className={`group relative px-4 py-2 glass rounded-full text-sm text-white-200/80 cursor-pointer transform transition-all duration-300 hover:scale-105 hover:border-cyan-400 hover:text-white hover:bg-cyan-400/10 hover:shadow-lg`}
                     onMouseEnter={() => setHoveredSkill(index)}
                     onMouseLeave={() => setHoveredSkill(null)}
                     style={{

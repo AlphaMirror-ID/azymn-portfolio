@@ -1,20 +1,12 @@
 import type { Metadata } from 'next';
-import { Inter, Inter_Tight, Fira_Code } from 'next/font/google';
+import { Inter } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from './provider';
+import SmoothScroll from '@/components/SmoothScroll';
+import { CustomCursor } from '@/components/CustomCursor';
 
 const inter = Inter({
   variable: '--font-inter',
-  subsets: ['latin'],
-});
-
-const interTight = Inter_Tight({
-  variable: '--font-inter-tight',
-  subsets: ['latin'],
-});
-
-const firaCode = Fira_Code({
-  variable: '--font-fira-code',
   subsets: ['latin'],
 });
 
@@ -57,11 +49,13 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    noimageindex: true,
     googleBot: {
       index: true,
       follow: true,
+      noimageindex: true,
       'max-video-preview': -1,
-      'max-image-preview': 'large',
+      'max-image-preview': 'none',
       'max-snippet': -1,
     },
   },
@@ -70,7 +64,7 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: '/favicon.png',
-    shortcut: '/favicon.ico',
+    shortcut: '/favicon.png',
     apple: '/favicon.png',
   },
   manifest: '/manifest.json',
@@ -144,9 +138,11 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.variable} ${interTight.variable} ${firaCode.variable} font-sans antialiased`}
+        className={`${inter.variable} font-sans antialiased bg-black-100 text-white-100`}
       >
-        <ThemeProvider
+        <SmoothScroll>
+          <CustomCursor />
+          <ThemeProvider
           attribute="class"
           defaultTheme="dark"
           enableSystem
@@ -154,6 +150,7 @@ export default function RootLayout({
         >
           {children}
         </ThemeProvider>
+        </SmoothScroll>
       </body>
     </html>
   );

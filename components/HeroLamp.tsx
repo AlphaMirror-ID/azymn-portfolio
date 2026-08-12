@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { motion } from 'framer-motion'; // Lebih umum menggunakan framer-motion
+import { motion } from 'framer-motion';
 import { LampContainer } from '../components/ui/Lamp';
 import { TextGenerateEffect } from './ui/TextGenerateEffect';
 import { MagicButton } from './ui/MagicButton';
@@ -22,7 +22,6 @@ export function LampDemo() {
         <h2 className="uppercase tracking-widest text-xs text-blue-100 max-w-prose text-center">
           FRONTEND DEVELOPER
         </h2>
-
 
         <TextGenerateEffect
           as="h1"

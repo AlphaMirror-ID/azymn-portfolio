@@ -150,6 +150,10 @@ const config = {
           from: { transform: 'translateY(0)' },
           to: { transform: 'translateY(-50%)' },
         },
+        aurora: {
+          from: { transform: 'rotate(0deg)' },
+          to: { transform: 'rotate(360deg)' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -164,13 +168,13 @@ const config = {
         scroll:
           'scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite',
         'scroll-vertical': 'scroll-vertical 20s linear infinite',
+        aurora: 'aurora 60s linear infinite',
       },
       fontFamily: {
         sans: ['var(--font-inter)', 'sans-serif'],
-        heading: ['var(--font-inter-tight)', 'var(--font-inter)', 'sans-serif'],
-        mono: ['var(--font-fira-code)', 'monospace'],
+        heading: ['var(--font-inter)', 'sans-serif'],
+        mono: ['var(--font-inter)', 'monospace'],
         inter: ['var(--font-inter)', 'sans-serif'],
-        'inter-tight': ['var(--font-inter-tight)', 'sans-serif'],
       },
     },
   },
