@@ -43,7 +43,7 @@ export const AboutMe = () => {
       className="w-full pt-20 md:pt-32 pb-10 md:pb-12 px-6 bg-transparent relative overflow-hidden"
       id="about"
     >
-      <BackgroundGrid side="right" />
+      <BackgroundGrid side="right" variant="dots" />
 
       {/* Content wrapper */}
       <div className="max-w-6xl mx-auto relative z-10">

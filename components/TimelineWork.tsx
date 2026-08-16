@@ -1,6 +1,5 @@
 import React from 'react';
 import { Timeline } from '@/components/ui/Timeline';
-import { BackgroundGrid } from './BackgroundGrid';
 
 export function TimelineDemo() {
   const data = [
@@ -54,7 +53,6 @@ export function TimelineDemo() {
 
   return (
     <div className="relative w-full overflow-clip pb-32" id='timeline'>
-      <BackgroundGrid side="right" />
       <h2 className="heading mt-20">
         Highlights from my{' '}
         <span className="text-cyan-500">development journey</span>

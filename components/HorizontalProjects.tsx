@@ -61,7 +61,7 @@ export const HorizontalProjects = () => {
                     <div className="flex items-center justify-between mt-6">
                       <div className="flex items-center -space-x-3">
                         {project.iconLists.map((icon, index) => (
-                          <div key={index} className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center backdrop-blur-md border border-white/20">
+                          <div key={index} className="w-8 h-8 rounded-full bg-[#10132E] border border-white/10 flex items-center justify-center">
                             <img src={icon} alt="tech icon" className="w-4 h-4" />
                           </div>
                         ))}

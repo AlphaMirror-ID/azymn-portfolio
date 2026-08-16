@@ -1,18 +1,34 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { MagicButton } from './ui/MagicButton';
 import { FaLocationArrow, FaArrowUp, FaDownload } from 'react-icons/fa';
 import { socialMedia } from '@/data';
 import { LanyardComponent } from './ui/Lanyard';
 
 export const Footer = () => {
+  const footerRef = useRef<HTMLElement>(null);
+  const [isInView, setIsInView] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInView(entry.isIntersecting);
+      },
+      { threshold: 0.05 }
+    );
+
+    if (footerRef.current) observer.observe(footerRef.current);
+    return () => observer.disconnect();
+  }, []);
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
     <footer
+      ref={footerRef}
       className="w-full px-6 pt-10 pb-10 mt-10 md:pt-10 md:pb-10 bg-transparent relative overflow-hidden"
       id="contact"
     >
@@ -69,7 +85,7 @@ export const Footer = () => {
           <div className="flex flex-col items-center lg:items-end space-y-6">
             <div className="w-full max-w-md glass rounded-3xl p-6 transition-all duration-500 hover:border-cyan-400/50 relative group">
               <div className="w-full aspect-square rounded-2xl overflow-hidden mb-6 relative">
-                <LanyardComponent position={[0, 0, 20]} gravity={[0, -40, 0]} />
+                {isInView && <LanyardComponent position={[0, 0, 20]} gravity={[0, -40, 0]} />}
               </div>
 
               {/* Social Media Links */}

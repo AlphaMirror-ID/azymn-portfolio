@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useMemo } from 'react';
+import { useRef, useMemo, useState, useEffect } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Float, MeshDistortMaterial } from '@react-three/drei';
 import { motion } from 'framer-motion';
@@ -38,13 +38,30 @@ const Shapes = () => {
 };
 
 export const ImmersiveHero = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+  const [isInView, setIsInView] = useState(true);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInView(entry.isIntersecting);
+      },
+      { threshold: 0.05 }
+    );
+
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="relative w-full h-screen overflow-hidden bg-black-100 flex items-center justify-center">
+    <section ref={sectionRef} className="relative w-full h-screen overflow-hidden bg-black-100 flex items-center justify-center">
       {/* 3D Background */}
       <div className="absolute inset-0 z-0 opacity-80">
-        <Canvas camera={{ position: [0, 0, 8], fov: 45 }}>
-          <Shapes />
-        </Canvas>
+        {isInView && (
+          <Canvas camera={{ position: [0, 0, 8], fov: 45 }}>
+            <Shapes />
+          </Canvas>
+        )}
       </div>
 
       {/* Foreground Content */}
