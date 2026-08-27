@@ -27,11 +27,12 @@ export const metadata: Metadata = {
   description:
     'Portfolio of Aziyusman, a Frontend Developer focused on Web Development, with experience building web, full-stack, and software projects.',
   applicationName: 'Aziyusman Portfolio',
-  authors: [{ name: 'Aziyusman', url: baseUrl }],
-  creator: 'Aziyusman',
-  publisher: 'Aziyusman',
+  authors: [{ name: 'Aziyusman Maulana', url: baseUrl }],
+  creator: 'Aziyusman Maulana',
+  publisher: 'Aziyusman Maulana',
   keywords: [
     'Aziyusman',
+    'Aziyusman Maulana',
     'Frontend Developer',
     'Web Developer',
     'Frontend Development',
