@@ -24,18 +24,34 @@ export function LanyardComponent({
   fov = 20,
   transparent = true,
 }: LanyardProps) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [isInView, setIsInView] = useState(true);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInView(entry.isIntersecting);
+      },
+      { threshold: 0.05 }
+    );
+
+    if (containerRef.current) observer.observe(containerRef.current);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="relative z-0 w-full h-[50vh] md:h-[70vh] flex justify-center items-center">
+    <div ref={containerRef} className="relative z-0 w-full h-[50vh] md:h-[70vh] flex justify-center items-center">
       <Canvas
         camera={{ position, fov }}
-        gl={{ alpha: transparent }}
+        frameloop={isInView ? "always" : "demand"}
+        gl={{ alpha: transparent, powerPreference: "high-performance" }}
         onCreated={({ gl }) =>
           gl.setClearColor(new THREE.Color(0x000000), transparent ? 0 : 1)
         }
       >
         <ambientLight intensity={Math.PI} />
-        <Physics gravity={gravity} timeStep={1 / 60}>
-          <Band />
+        <Physics gravity={gravity} timeStep={1 / 60} paused={!isInView}>
+          <Band active={isInView} />
         </Physics>
         <Environment blur={0.75}>
           {/* ... sisa kode Environment ... */}
@@ -76,9 +92,10 @@ export function LanyardComponent({
 interface BandProps {
   maxSpeed?: number;
   minSpeed?: number;
+  active?: boolean;
 }
 
-function Band({ maxSpeed = 50, minSpeed = 0 }: BandProps) {
+function Band({ maxSpeed = 50, minSpeed = 0, active = true }: BandProps) {
   const band = useRef<any>(null);
   const fixed = useRef<any>(null);
   const j1 = useRef<any>(null);
@@ -148,6 +165,7 @@ function Band({ maxSpeed = 50, minSpeed = 0 }: BandProps) {
   }, [hovered, dragged]);
 
   useFrame((state, delta) => {
+    if (!active && !dragged) return;
     if (dragged && typeof dragged !== "boolean") {
       vec.set(state.pointer.x, state.pointer.y, 0.5).unproject(state.camera);
       dir.copy(vec).sub(state.camera.position).normalize();
@@ -285,3 +303,6 @@ function Band({ maxSpeed = 50, minSpeed = 0 }: BandProps) {
     </>
   );
 }
+
+useGLTF.preload('/card.glb');
+useTexture.preload('/lanyard.png');

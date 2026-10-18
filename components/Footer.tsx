@@ -8,18 +8,31 @@ import { LanyardComponent } from './ui/Lanyard';
 
 export const Footer = () => {
   const footerRef = useRef<HTMLElement>(null);
-  const [isInView, setIsInView] = useState(false);
+  const [shouldMount, setShouldMount] = useState(false);
 
   useEffect(() => {
+    // Mount ahead of time when user scrolls anywhere within 1000px of footer
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setIsInView(entry.isIntersecting);
+        if (entry.isIntersecting) {
+          setShouldMount(true);
+          observer.disconnect();
+        }
       },
-      { threshold: 0.05 }
+      { rootMargin: '1000px 0px', threshold: 0 }
     );
 
     if (footerRef.current) observer.observe(footerRef.current);
-    return () => observer.disconnect();
+
+    // Also mount in background after initial load (1.5s) so it's already rendered
+    const timer = setTimeout(() => {
+      setShouldMount(true);
+    }, 1500);
+
+    return () => {
+      observer.disconnect();
+      clearTimeout(timer);
+    };
   }, []);
 
   const scrollToTop = () => {
@@ -85,7 +98,13 @@ export const Footer = () => {
           <div className="flex flex-col items-center lg:items-end space-y-6">
             <div className="w-full max-w-md glass rounded-3xl p-6 transition-all duration-500 hover:border-cyan-400/50 relative group">
               <div className="w-full aspect-square rounded-2xl overflow-hidden mb-6 relative">
-                {isInView && <LanyardComponent position={[0, 0, 20]} gravity={[0, -40, 0]} />}
+                {shouldMount ? (
+                  <LanyardComponent position={[0, 0, 20]} gravity={[0, -40, 0]} />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center">
+                    <div className="w-8 h-8 rounded-full border-2 border-cyan-400/20 border-t-cyan-400 animate-spin" />
+                  </div>
+                )}
               </div>
 
               {/* Social Media Links */}
