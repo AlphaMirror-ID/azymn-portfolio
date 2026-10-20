@@ -20,7 +20,7 @@ export function LampDemo() {
         className="relative z-10 flex flex-col items-center justify-center px-4"
       >
         <h2 className="uppercase tracking-widest text-xs text-blue-100 max-w-prose text-center">
-          FRONTEND DEVELOPER
+          Aziyusman Maulana &bull; Frontend Developer
         </h2>
 
         <TextGenerateEffect

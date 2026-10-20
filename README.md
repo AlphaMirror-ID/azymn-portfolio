@@ -1,4 +1,4 @@
-# 🌐 Aziyusman's Portfolio
+# 🌐 Aziyusman Maulana's Portfolio
 
 This is a modern, responsive personal portfolio website built with [Next.js](https://nextjs.org), styled using [Tailwind CSS](https://tailwindcss.com), and optimized for performance. It showcases selected projects, work experience, tools used, and a brief timeline of the developer’s journey.
 

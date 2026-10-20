@@ -74,11 +74,14 @@ export const ImmersiveHero = () => {
         >
           <div className="glass px-6 py-2 rounded-full inline-flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
-            <span className="text-xs font-mono uppercase tracking-widest text-white-200">Frontend Developer</span>
+            <span className="text-xs font-mono uppercase tracking-widest text-white-200">
+              Aziyusman Maulana &bull; Frontend Developer
+            </span>
           </div>
 
           <h1 className="font-heading text-6xl md:text-8xl lg:text-[10rem] font-bold tracking-tighter leading-none text-white drop-shadow-2xl">
             AZIYUSMAN
+            <span className="sr-only"> Maulana</span>
           </h1>
 
           <motion.h2 

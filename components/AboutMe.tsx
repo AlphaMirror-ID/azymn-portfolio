@@ -68,7 +68,7 @@ export const AboutMe = () => {
               <div className="w-80 h-80 rounded-3xl overflow-hidden glass shadow-2xl transform transition-all duration-500 group-hover:scale-105 group-hover:rotate-2 group-hover:shadow-3xl">
                 <Image
                   src="/profile-photo.jpg"
-                  alt="Aziyusman - Full Stack Developer Profile Photo"
+                  alt="Aziyusman Maulana (Aziyusman) - Frontend Developer Profile Photo"
                   width={320}
                   height={320}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
@@ -99,12 +99,12 @@ export const AboutMe = () => {
             <div className="space-y-4">
               <h2 className="text-2xl md:text-3xl font-bold text-white flex items-center gap-2">
                 Hi, I&apos;m
-                <span className="animate-pulse">Aziyusman!</span>
+                <span className="animate-pulse">Aziyusman Maulana!</span>
               </h2>
 
               <div className="space-y-4">
                 <p className="text-white/80 leading-relaxed transform transition-all duration-300 hover:text-white/90">
-                  I'm a frontend developer focused on building web interfaces that are responsive, clear, and comfortable to use. I enjoy working on the details that make an interface feel simple and natural, from layout and interactions to performance and responsiveness.
+                  I&apos;m Aziyusman Maulana, a frontend developer focused on building web interfaces that are responsive, clear, and comfortable to use. I enjoy working on the details that make an interface feel simple and natural, from layout and interactions to performance and responsiveness.
                 </p>
 
                 <p className="text-white/80 leading-relaxed transform transition-all duration-300 hover:text-white/90">

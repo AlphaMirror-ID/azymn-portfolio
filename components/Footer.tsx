@@ -72,7 +72,7 @@ export const Footer = () => {
                   otherClasses="!text-xs !px-4 !py-2 !gap-2"
                 />
               </a>
-              <a href="/Aziyusman-CV.pdf" download>
+              <a href="/Aziyusman-CV.pdf" download title="Download Aziyusman Maulana CV">
                 <MagicButton
                   title="Resume"
                   icon={<FaDownload />}
@@ -139,7 +139,7 @@ export const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-6">
           <div className="text-center md:text-left">
             <p className="text-xs font-mono text-white-200/60 tracking-wider">
-              &copy; {new Date().getFullYear()} Aziyusman. All rights reserved.
+              &copy; {new Date().getFullYear()} Aziyusman Maulana. All rights reserved.
             </p>
           </div>
 
