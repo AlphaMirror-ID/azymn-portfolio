@@ -75,7 +75,7 @@ export const ImmersiveHero = () => {
           <div className="glass px-6 py-2 rounded-full inline-flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
             <span className="text-xs font-mono uppercase tracking-widest text-white-200">
-              &bull; Frontend Developer
+              Frontend Developer
             </span>
           </div>
 
