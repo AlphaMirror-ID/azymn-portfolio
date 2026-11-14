@@ -89,7 +89,7 @@ export const Footer = () => {
                 <span className="text-xs font-semibold tracking-wide">Open to new opportunities</span>
               </div>
               <div className="text-xs text-white-200/60 font-mono tracking-wider pl-4">
-                Based in Bandung, Indonesia 🇮🇩
+                Based in Majalengka, Indonesia 🇮🇩
               </div>
             </div>
           </div>
